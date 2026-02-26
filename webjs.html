@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //js variable data type value
+
+        //primitive : immutable single value stores in memory
+        //string
+
+        var myName="Aniruddha";
+        console.log( "my name is " + myName);
+        console.log(typeof(myName));
+
+        //number
+        var myMob=53132321532;
+        console.log("my mobile number is " + myMob);
+        console.log(typeof(myMob));
+
+        //boolean
+        var ismarried=true;
+        console.log(myName + "is married " + ismarried);
+        console.log(typeof(ismarried));
+
+        //undefined
+        var myAdd;
+        console.log(myName + " my address is " + myAdd);
+        console.log(typeof(myAdd));
+
+        //null
+        var myEmail=null;
+        console.log(myName + " my email is " + myEmail);
+        console.log(typeof(myEmail));
+        //bigint
+        var myValue=BigInt(131235341541534153265321532152);
+        console.log("my value is " + myValue);
+        console.log(typeof(myValue));
+
+        //symbol: unique primitive ddta value in js
+        var val1=Symbol("hello");
+        var val2=Symbol("hello");
+        console.log(val1==val2);
+        console.log(typeof(val1) +"and "+typeof(val2));
+
+        //refrence:non-primitive : mutable multiple value stores in memory
+        //object -value sre defined in paired key -vlaue
+        let myInfo={
+            name:"aniruddha", 
+            age:22,
+            mob:5313513135,
+            email:"aniruddha@gmail.com",
+            address:null,
+            branch:"cse",
+            section:18
+        }
+        console.log(myInfo);
+        console.log(myInfo.branch);
+        //to find length of object
+        console.log(Object.keys(myInfo).length);
+
+        //array- collection of similar or different data type values stores in indexed form of js
+         let studentDetails=["aniruddha",24,false,];
+         console.log(studentDetails[2]);
+         console.log(studentDetails.length);
+
+         for (i=0;i<studentDetails.length;i++){
+            console.log(studentDetails[i]);
+         }
+         document.write(myName);
+
+         //function - block of code to perform a specific task
+         function mycal(){
+            let num1=5;
+            let num2=10;
+            let result=num1+num2;
+            console.log( "sum of numbers is " + (num1+num2));
+            console.log( result);
+         }
+         mycal();
+
+
+
+    </script> 
+</body>
+</html>
