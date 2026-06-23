@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="n1" type="number"><br>
+    <input id="n2" type="number"><br>
+    <input id="n3" type="number"><br>
+    <input id="n4" type="number"><br>
+    <input id="n5" type="number"><br>
+    <button onclick="run()">result</button>
+    <p id="out"></p>
+    <script>
+        function run(){
+            let m = [
+                Number(document.getElementById("n1").value),
+                Number(document.getElementById("n2").value),
+                Number(document.getElementById("n3").value),
+                Number(document.getElementById("n4").value),
+                Number(document.getElementById("n5").value)
+            ];
+            let s = 0;
+            for(let i = 0; i < m.length; i++){
+                s += m[i];
+            }
+            let grade;
+            if(s>=340){
+                    grade = "grade=A"
+               }
+                else if(s>=300){
+                    grade = "grade=B"
+                }
+                else if(s>=250){
+                    grade = "grade=C"
+                }
+                else{
+                    grade = "grade=F"
+                };
+                let l=m[0];
+                let y=0;
+                for(let i=1;i<m.length;i++){
+                    if(l<m[i])
+                        l=m[i];
+                    y=i;
+                    
+                }
+
+            document.getElementById("out").innerHTML = 
+                "sum = " + s +
+                "<br>average = " + s / m.length +
+                "<br>grade="+grade+
+                "<br> largest="+l+" at index "+y;
+                
+        }
+    </script>
+</body>
+</html>
